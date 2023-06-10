@@ -3,6 +3,7 @@ from beautifultable import BeautifulTable
 from Usuario import Usuario
 import time
 import os
+import re
 
 try:
     os.system('cls')
@@ -33,7 +34,13 @@ try:
         nombreRealNombre = input("Nombre Real: ")
         nombreRealApellido = input("Apellido Real: ")
         correo = input("Correo Electrónico: ")
-        contraseña = input("Contraseña: ")
+
+        while True:
+            contraseña = input("Contraseña: ")
+            if len(contraseña) < 8 or not re.match("^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]+$", contraseña):
+                print("La contraseña debe tener al menos 8 caracteres y ser alfanumérica.")
+            else:
+                break
 
         usuario = Usuario(None, nombreUsuario, nombreRealNombre, nombreRealApellido, correo, contraseña, None)
         print("¡Usuario registrado exitosamente!")
