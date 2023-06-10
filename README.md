@@ -1,6 +1,6 @@
 # Prototipo-Juego-de-Rol
 
-_El código proporcionado es una implementación básica de una aplicación de registro y inicio de sesión en Python._
+_El código proporcionado es una implementación básica de una aplicación en Python._
 
 ## 🚧 Estado del proyecto 🚧
 
