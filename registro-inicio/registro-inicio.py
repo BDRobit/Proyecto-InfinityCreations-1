@@ -1,6 +1,6 @@
 import requests
 from beautifultable import BeautifulTable
-from Usuario import Usuario
+from models.usuario import Usuario
 import time
 import os
 import re
@@ -35,6 +35,10 @@ try:
         nombreRealApellido = input("Apellido Real: ")
         correo = input("Correo Electrónico: ")
 
+        while correoDataBase(correo):
+            print("El correo ya está registrado.")
+            correo = input("Ingrese otro correo electrónico: ")
+            
         while True:
             contraseña = input("Contraseña: ")
             if len(contraseña) < 8 or not re.match("^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]+$", contraseña):
@@ -69,5 +73,6 @@ try:
             break
         else:
             incorrecto()
+
 except (requests.ConnectionError, requests.Timeout):
     print("Sin conexion :(")
