@@ -26,7 +26,7 @@ try:
         print("Inicio de sesión exitoso!")
         input("Presione Enter para continuar...")
 
-    def registrarUsuario():
+    """     def registrarUsuario():
         os.system('cls')
         print("=== Registro de Usuario ===")
 
@@ -48,7 +48,7 @@ try:
 
         usuario = Usuario(None, nombreUsuario, nombreRealNombre, nombreRealApellido, correo, contraseña, None)
         print("¡Usuario registrado exitosamente!")
-        input("Presione Enter para continuar...")
+        input("Presione Enter para continuar...") """
 
     def salir():
         os.system('cls')
