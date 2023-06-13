@@ -67,7 +67,7 @@ try:
         if opcion == '1':
             iniciarSesion()
         elif opcion == '2':
-            registrarUsuario()
+            """ registrarUsuario() """
         elif opcion == '3':
             salir()
             break
