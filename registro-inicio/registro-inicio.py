@@ -1,9 +1,13 @@
-import requests
+from pymongo import MongoClient
 from beautifultable import BeautifulTable
 from models.usuario import Usuario
 import time
 import os
-import re
+
+# Establecer la conexión con MongoDB
+client = MongoClient("mongodb://localhost:27017")
+db = client["infinityCreations"]
+usuarios_collection = db["usuarios"]
 
 try:
     os.system('cls')
@@ -21,12 +25,16 @@ try:
         correo = input("Correo Electrónico: ")
         contraseña = input("Contraseña: ")
 
-        usuario = Usuario(None, None, None, None, correo, contraseña, None)
+        usuario = usuarios_collection.find_one({"correo": correo, "contraseña": contraseña})
 
-        print("Inicio de sesión exitoso!")
+        if usuario:
+            print("Inicio de sesión exitoso!")
+        else:
+            print("Inicio de sesión fallido. Verifica tus credenciales.")
+
         input("Presione Enter para continuar...")
 
-    """     def registrarUsuario():
+    def registrarUsuario():
         os.system('cls')
         print("=== Registro de Usuario ===")
 
@@ -35,20 +43,21 @@ try:
         nombreRealApellido = input("Apellido Real: ")
         correo = input("Correo Electrónico: ")
 
-        while correoDataBase(correo):
+        while usuarios_collection.find_one({"correo": correo}):
             print("El correo ya está registrado.")
             correo = input("Ingrese otro correo electrónico: ")
             
         while True:
             contraseña = input("Contraseña: ")
-            if len(contraseña) < 8 or not re.match("^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]+$", contraseña):
-                print("La contraseña debe tener al menos 8 caracteres y ser alfanumérica.")
+            if len(contraseña) < 8:
+                print("La contraseña debe tener al menos 8 caracteres.")
             else:
                 break
 
         usuario = Usuario(None, nombreUsuario, nombreRealNombre, nombreRealApellido, correo, contraseña, None)
+        usuarios_collection.insert_one(usuario.__dict__)
         print("¡Usuario registrado exitosamente!")
-        input("Presione Enter para continuar...") """
+        input("Presione Enter para continuar...")
 
     def salir():
         os.system('cls')
@@ -67,12 +76,15 @@ try:
         if opcion == '1':
             iniciarSesion()
         elif opcion == '2':
-            """ registrarUsuario() """
+            registrarUsuario()
         elif opcion == '3':
             salir()
             break
         else:
             incorrecto()
 
-except (requests.ConnectionError, requests.Timeout):
-    print("Sin conexion :(")
+except:
+    print("Error durante la ejecución del programa.")
+
+# Cerrar la conexión con MongoDB
+client.close()

@@ -1,0 +1,72 @@
+//Eliminar Base de datos por si existe
+use("infinityCreations")
+db.dropDatabase()
+
+// Crear Coleccion
+use("infinityCreations")
+db.createCollection("estados");
+db.createCollection("equipamientos");
+db.createCollection("razas");
+db.createCollection("habilidades");
+db.createCollection("poderes");
+db.createCollection("usuarios");
+db.createCollection("registros");
+db.createCollection("personajes");
+db.createCollection("personajes_equipamientos");
+db.createCollection("personajes_habilidades");
+db.createCollection("personajes_poder");
+
+
+// Insertar documento en la colección "estados"
+use("infinityCreations")
+var elems = [
+    {
+        _id: 1,
+        nombreEstado: "Vivo",
+        descripcionEstado: "El personaje está vivo"
+    },
+    {
+        _id: 2,
+        nombreEstado: "Muerto",
+        descripcionEstado: "El personaje está muerto"
+    },
+    {
+        _id: 3,
+        nombreEstado: "Congelado",
+        descripcionEstado: "El personaje está congelado"
+    }
+];
+db.estados.insertMany(elems);
+
+// Consultar
+
+use("infinityCreations")
+db.estados.find()
+
+// Creación Usuarios
+
+use("infinityCreations")
+var usu = [
+    {
+        _id: 1,
+        nombreUsuario: "Zextokar",
+        nombreRealNombre: "Renato",
+        nombreRealApellido: "Rodriguez",
+        correo: "correoejemplo1@gmail.com",
+        contraseña: "contraseña",
+        GM: 1
+    },
+    {
+        _id: 2,
+        nombreUsuario: "Hidari",
+        nombreRealNombre: "Javier",
+        nombreRealApellido: "Castillo",
+        correo: "correoejemplo2@gmail.com",
+        contraseña: "contraseña1",
+        GM: 0
+    },
+];
+db.usuarios.insertMany(usu);
+
+use("infinityCreations")
+db.usuarios.find()
