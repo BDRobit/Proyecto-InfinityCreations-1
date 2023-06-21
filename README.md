@@ -11,8 +11,8 @@ Este repositorio contiene un prototipo de una aplicación de juego de rol desarr
 
 ## Características principales
 
-| Características                                | Descripción                                                                                                                                                               |
-| ----------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|Características|Descripción|
+|----------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Creación de personajes                         | Los jugadores pueden crear un personaje único utilizando una plantilla que incluye nombre del jugador, nombre del personaje, raza, nivel y estado.                        |
 | Habilidades, equipamiento y poderes             | Los personajes pueden tener hasta 8 habilidades, 8 equipamientos y 4 poderes.                                                                                              |
 | Perfil de Game Master (GM)                      | Existe un perfil especial de GM con privilegios para modificar las fichas de los personajes.                                                                               |
@@ -25,19 +25,26 @@ Este repositorio contiene un prototipo de una aplicación de juego de rol desarr
 
 ## Presentación del Prototipo
 
-| Menú Principal                                  |
-| ------------------------------------------------ |
-| ![BeautifulTable](https://i.imgur.com/QNA8FBG.png) |
-| Inicio Sesión                                   |
-| ![BeautifulTable](https://i.imgur.com/QNA8FBG.png) |
-| Registro Usuarios                                |
-| ![BeautifulTable](https://i.imgur.com/QNA8FBG.png) |
+|Menú Principal|Inicio Sesión|
+|---------------|-----------|
+|![BeautifulTable](https://i.imgur.com/QNA8FBG.png)|![BeautifulTable](https://i.imgur.com/QNA8FBG.png)|
 
+|Registro Usuarios| Equipos|
+|---------------|-----------|
+|![BeautifulTable](https://i.imgur.com/QNA8FBG.png)|![BeautifulTable](https://i.imgur.com/QNA8FBG.png)|
+
+|Poderes| Habilidades|
+|---------------|-----------|
+|![BeautifulTable](https://i.imgur.com/QNA8FBG.png)|![BeautifulTable](https://i.imgur.com/QNA8FBG.png)|
+
+|Razas| Otros|
+|---------------|-----------|
+|![BeautifulTable](https://i.imgur.com/QNA8FBG.png)|![BeautifulTable](https://i.imgur.com/QNA8FBG.png)|
 # Bibliotecas Necesarias
 
 ## __BeautifulTable__
 
-![BeautifulTable](https://i.imgur.com/QNA8FBG.png)
+![BeautifulTable](https://media.geeksforgeeks.org/wp-content/uploads/20200708051026/exampletable.PNG)
 
 # Instalación de BeautifulTable
 
@@ -67,15 +74,17 @@ Este comando descargará e instalará BeautifulTable y sus dependencias.
 #### Recursos Adicionales
 
 Documentación oficial de `Beatiful Table`: [https://pypi.org/project/beautifultable/]
+
 ## Pymongo
 
 ![Pymongo](https://i.ytimg.com/vi/NVoeBH0uBHo/maxresdefault.jpg)
+
 ## Requisitos previos
 
 - Python instalado en su sistema (versión 3.x recomendada).
 - Una instalación de MongoDB o acceso a una instancia de MongoDB remota.
 
-## Paso 1: Instalación de la biblioteca `pymongo`
+## Paso 1: Instalación de la biblioteca Pymongo
 
 Antes de comenzar, asegúrese de tener instalada la biblioteca `pymongo`. Puede instalarla utilizando `pip`, el gestor de paquetes de Python, ejecutando el siguiente comando:
 
