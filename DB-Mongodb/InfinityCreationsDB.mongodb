@@ -17,7 +17,7 @@ db.createCollection("personajes_habilidades");
 db.createCollection("personajes_poder");
 
 
-// Insertar documento en la colección "estados"
+// Creación Estados
 use("infinityCreations")
 var elems = [
     {
@@ -70,3 +70,36 @@ db.usuarios.insertMany(usu);
 
 use("infinityCreations")
 db.usuarios.find()
+
+// Creación Razas
+use("infinityCreations")
+var razas = [
+    {
+        _id: 1,
+        nombreRaza: "Humano",
+        descripcionRaza: "Los humanos son una raza versátil y adaptativa. Poseen habilidades equilibradas y se destacan por su inteligencia y capacidad para desarrollar diversas habilidades.",
+    },
+    {
+        _id: 2,
+        nombreRaza: "Orco",
+        descripcionRaza: "Los orcos son una raza fuerte y robusta. Son expertos en combate cuerpo a cuerpo y tienen una gran resistencia. Poseen una naturaleza aguerrida y suelen vivir en comunidades tribales.",
+    },
+    {
+        _id: 3,
+        nombreRaza: "Demonio",
+        descripcionRaza: "Los demonios son seres ancestrales y poderosos. Tienen habilidades sobrenaturales y un gran dominio de la magia oscura. Su apariencia suele ser intimidante y suelen habitar en dimensiones infernales.",
+    },
+    {
+        _id: 4,
+        nombreRaza: "Hada",
+        descripcionRaza: "Las hadas son seres etéreos y mágicos. Son conocidas por su belleza y sus poderes relacionados con la naturaleza. Suelen ser pequeñas y tener alas, y se les atribuyen cualidades benéficas y protectoras.",
+    },
+    {
+        _id: 5,
+        nombreRaza: "Duende",
+        descripcionRaza: "Los duendes son seres astutos y traviesos. Se caracterizan por su pequeña estatura y su habilidad para la artesanía. A menudo se les relaciona con la suerte y se dice que pueden conceder deseos a aquellos que los traten con respeto.",
+    }
+];
+db.razas.insertMany(razas);
+use("infinityCreations")
+db.razas.find()

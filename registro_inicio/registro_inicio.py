@@ -7,10 +7,10 @@ def iniciarSesion(usuarios_collection):
     print("=== Inicio de Sesión ===")
     correo = input("Correo Electrónico: ")
     contraseña = input("Contraseña: ")
-    usuario = usuarios_collection.find_one({"correo": correo, "contraseña": contraseña})
+    usuario = usuarios_collection.find_one({"_correo": correo, "_contraseña": contraseña})
 
     if usuario:
-        print("Inicio de sesión exitoso!")
+        print("¡Inicio de sesión exitoso!")
     else:
         print("Inicio de sesión fallido. Verifica tus credenciales.")
     input("Presione Enter para continuar...")

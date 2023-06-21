@@ -1,13 +1,13 @@
 class Usuario:
 
     def __init__(self, id_usuario, nombreUsuario, nombreRealNombre, nombreRealApellido, correo, contraseña, gameMaster):
-        self.__id_usuario = id_usuario
-        self.__nombreUsuario = nombreUsuario
-        self.__nombreRealNombre = nombreRealNombre
-        self.__nombreRealApellido = nombreRealApellido
-        self.__correo = correo
-        self.__contraseña = contraseña
-        self.__gameMaster = gameMaster
+        self._id_usuario = id_usuario
+        self._nombreUsuario = nombreUsuario
+        self._nombreRealNombre = nombreRealNombre
+        self._nombreRealApellido = nombreRealApellido
+        self._correo = correo
+        self._contraseña = contraseña
+        self._gameMaster = gameMaster
 
     def getId_usuario(self):
         return self.__id_usuario
