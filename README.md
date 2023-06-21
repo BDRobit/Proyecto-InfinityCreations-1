@@ -26,11 +26,11 @@ Este repositorio contiene un prototipo de una aplicación de juego de rol desarr
 ## Presentación del Prototipo
 
 |Menú Principal|Inicio Sesión|Registro Usuarios|
-|---------------|-----------|
+|---------------|-----------|-----------|
 |![BeautifulTable](https://i.imgur.com/QNA8FBG.png)|![BeautifulTable](https://i.imgur.com/QNA8FBG.png)|![BeautifulTable](https://i.imgur.com/QNA8FBG.png)|
 
 |Equipos|Poderes| Habilidades|
-|---------------|-----------|
+|---------------|-----------|-----------|
 |![BeautifulTable](https://i.imgur.com/QNA8FBG.png)|![BeautifulTable](https://i.imgur.com/QNA8FBG.png)|![BeautifulTable](https://i.imgur.com/QNA8FBG.png)|
 
 |Razas| Otros|
