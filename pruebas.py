@@ -5,7 +5,7 @@ from beautifultable import BeautifulTable
 
 
 from pantalla import usuario
-from pantalla import Raza, listRazas, listPoder, listHabilidad 
+from pantalla import listRazas, listPoder, listHabilidad 
 from pantalla import listEquipo
 
 # ordenando menu personaje para quitar errores
@@ -73,11 +73,11 @@ while True:
             listRazas()
             print('=====Selecciona por su ID y mostraré sus habilidades=====')
             input("ID de raza escogida: ")
-            listHabilidad(raza)
+            listHabilidad()
             print('=====Puedes seleccionar 2 ID de habilidades======')
             input("ID de Habilidad 1: ")
             input("ID de Habilidad 2: ")
-            listPoder(raza)
+            listPoder()
             print('=======Solo puedes seleccionar 1 poder=======')
             input("ID de poder: ")
             print('====Volverás al menú si deseas cambiar la raza o seguir con el equipamiento====')
@@ -90,7 +90,7 @@ while True:
 
         elif opcion == '2':
             print('=====Puedes elegir el equipamiento que desees=====')
-            listEquipo(equipo)
+            listEquipo()
             print('=======Solo puedes seleccionar 1 equipo=======')
             input("ID de equipo: ")
             print('=======Volverás al menú=======')
