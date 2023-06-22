@@ -27,16 +27,26 @@ usuario = UserLogger(1, "Jonas", "johndoe", True)
     
 ##Simulando cosas
 
+def listRazas():
+    razas = [
+        Raza(1, "Raza 1"),
+        Raza(2, "Raza 2"),
+        Raza(3, "Raza 3")
+    ]
+
+    for raza in razas:
+        print(f"ID: {raza.ID_raza}, Nombre: {raza.nombreRaza}")
+
 
 class listEquipo:
     def __init__(self, ID_equipo, nombreEquipo):
         self.ID_equipo = ID_equipo
         self.nombreEquipo = nombreEquipo
 
-class listRaza:
-    def __init__(self, ID_equipo, nombreEquipo):
-        self.ID_equipo = ID_equipo
-        self.nombreEquipo = nombreEquipo
+class Raza:
+    def __init__(self, ID_raza, nombreRaza):
+        self.ID_raza = ID_raza
+        self.nombreRaza = nombreRaza
 
 class listPoder:
     def __init__(self, ID_equipo, nombreEquipo):
