@@ -37,8 +37,30 @@ def listRazas():
     for raza in razas:
         print(f"ID: {raza.ID_raza}, Nombre: {raza.nombreRaza}")
 
+def listEquipo():
+    equipos = [
+        Equipo(1, "Equipo 1"),
+        Equipo(2, "Equipo 2"),
+        Equipo(3, "Equipo 3"),
+        Equipo(4, "Equipo 4"),
+        Equipo(5, "Equipo 5"),
+        Equipo(6, "Equipo 7"),
+        Equipo(7, "Equipo 8"),
+        Equipo(8, "Equipo 9")
+    ]
 
-class listEquipo:
+    for equipo in equipos:
+        print(f"ID: {equipo.ID_equipo}, Nombre: {equipo.nombreEquipo}")
+
+
+
+
+
+
+
+
+
+class Equipo:
     def __init__(self, ID_equipo, nombreEquipo):
         self.ID_equipo = ID_equipo
         self.nombreEquipo = nombreEquipo
